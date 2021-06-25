@@ -409,7 +409,7 @@ footer {
    #nosotros2 {
     margin-left: 0%;
     }
-   .nosotros .content-box > .box-50{
+   #nosotros .content-box > .box-50{
     text-align: center;
    }
 }
