@@ -100,7 +100,7 @@ figcaption {
 }
 
 .width__p {
-   width: 464px;
+   width: 56%;
 }
 
 .tachado {
@@ -150,6 +150,9 @@ button:hover {
    margin-bottom: 16px;
 }
 
+#nosotros2{
+    margin-left: 14%;
+}
 .clip-blue-1 {
    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
@@ -402,5 +405,11 @@ footer {
    }
    .text-desk {
       display: none;
+   }
+   #nosotros2 {
+    margin-left: 0%;
+}
+   .nosotros .content-box > .box-50{
+    text-align: center;
    }
 }
