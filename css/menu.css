@@ -1,0 +1,143 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-white);
+    z-index: 1;
+ }
+ 
+ .header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--color-blue);
+ }
+ 
+ .header ul a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-white);
+ }
+ 
+ .header .icono {
+    width: 24px;
+    height: 24px;
+ }
+ 
+ .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    width: 100%;
+    display: block;
+ }
+ 
+ .header .menu-icono {
+    padding: 20px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+ }
+ 
+ .header .menu-icono .nav-icon {
+    background: #000;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+ }
+ 
+ .header .menu-icono .nav-icon:before {
+    background: #000;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+ }
+ 
+ .header .menu-icono .nav-icon:after {
+    background: #000;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+ }
+ 
+ .header .menu-boton {
+    display: none;
+ }
+ 
+ .header .menu-boton:checked~nav .menu {
+    max-height: 320px;
+ }
+ 
+ .header .menu-boton:checked~.menu-icono .nav-icon {
+    background: transparent;
+ }
+ 
+ .header .menu-boton:checked~.menu-icono .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+ }
+ 
+ .header .menu-boton:checked~.menu-icono .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+ }
+ 
+ @media screen and (min-width: 768px) {
+    .header .menu-icono {
+       display: none;
+    }
+    .header {
+       position: unset;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 26px 100px;
+    }
+    .header ul {
+       overflow: unset;
+       background-color: unset;
+    }
+    .header .icono {
+       width: 36px;
+       height: 36px;
+    }
+    .header .menu {
+       clear: none;
+       float: right;
+       max-height: none;
+       width: 486px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    .header ul a {
+       font-size: 16px;
+    }
+    .header li {
+       float: left;
+    }
+    .header li a {
+       color: #060A24;
+       font-family: 'IBM Plex Mono', monospace;
+       font-size: 16px;
+       letter-spacing: 0;
+       line-height: 28px;
+       transition: all 0.5s ease;
+    }
+    .header a:hover {
+       text-decoration: line-through;
+       color: var(--green);
+    }
+    .header a:active {
+       text-decoration: line-through;
+       color: rgba(6, 10, 36, 0.56);
+    }
+ }
